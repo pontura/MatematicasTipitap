@@ -1,0 +1,125 @@
+{
+	texts:
+	[
+		{
+			ok: "caminar",
+			wrong: ["escribir", "comer", "leer"]
+		},
+		{
+			ok: "saltar",
+			wrong: ["beber", "subir", "vestir"]
+		},
+		{
+			ok: "escuchar",
+			wrong: ["correr", "oler", "dormir"]
+		},
+		{
+			ok: "viajar",
+			wrong: ["barrer", "salir", "llover"]
+		},
+		{
+			ok: "dibujar",
+			wrong: ["abrir", "conducir", "encender"]
+		},
+		{
+			ok: "bailar",
+			wrong: ["construir", "ver", "sonreir"]
+		},
+		{
+			ok: "pescar",
+			wrong: ["beber", "oler", "conducir"]
+		},
+		{
+			ok: "cantar",
+			wrong: ["dormir", "sonreir", "salir"]
+		},
+		{
+			ok: "nadar",
+			wrong: ["comer", "barrer", "llover"]
+		},
+		{
+			ok: "cocinar",
+			wrong: ["leer", "vestir", "escribir"]
+		},
+		{
+			ok: "leer",
+			wrong: ["pescar", "construir", "abrir"]
+		},
+		{
+			ok: "comer",
+			wrong: ["bailar", "caminar", "sonreir"]
+		},
+		{
+			ok: "beber",
+			wrong: ["subir", "dormir", "cocinar"]
+		},
+		{
+			ok: "encender",
+			wrong: ["conducir", "dibujar", "escuchar"]
+		},
+		{
+			ok: "correr",
+			wrong: ["escribir", "conducir", "salir"]
+		},
+		{
+			ok: "barrer",
+			wrong: ["nadar", "cantar", "vestir"]
+		},
+		{
+			ok: "llover",
+			wrong: ["bailar", "abrir", "escribir"]
+		},
+		{
+			ok: "ver",
+			wrong: ["viajar", "dormir", "pescar"]
+		},
+		{
+			ok: "oler",
+			wrong: ["recibir", "subir", "saltar"]
+		},
+		{
+			ok: "amanecer",
+			wrong: ["construir","viajar", "cocinar"]
+		},
+		{		
+			ok: "dormir",
+			wrong: ["pescar", "caminar", "leer"]
+		},
+		{		
+			ok: "escribir",
+			wrong: ["bailar", "beber", "comer"]
+		},
+		{		
+			ok: "subir",
+			wrong: ["escuchar", "viajar", "encender"]
+		},
+		{		
+			ok: "salir",
+			wrong: ["barrer", "llover", "dibujar"]
+		},
+		{		
+			ok: "abrir",
+			wrong: ["correr", "oler", "saltar"]
+		},
+		{		
+			ok: "conducir",
+			wrong: ["nadar", "cantar", "llover"]
+		},
+		{		
+			ok: "construir",
+			wrong: ["ver", "beber", "pescar"]
+		},
+		{		
+			ok: "vestir",
+			wrong: ["oler", "cantar", "amanecer"]
+		},
+		{		
+			ok: "sonreir",
+			wrong: ["escuchar", "encender", "dibujar"]
+		},
+		{		
+			ok: "recibir",
+			wrong: ["comer", "pescar", "bailar"]
+		}
+	]
+}

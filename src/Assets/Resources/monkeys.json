@@ -1,0 +1,44 @@
+{
+	"level_1":	[
+		{
+			"title": "El resultado de 15x100 es:",
+			"ok": ["1500"],
+			"wrong": ["150","15000"]
+		},
+		{
+			"title": "Martín compró 2 facturas y gastó $44, ¿cuánto gastará si comprará si compra 4?",
+			"ok": ["$88"],
+			"wrong": ["$46","$176"]
+		},
+		{
+			"title": "¿Qué otro producto tiene el mismo resultado que 8x5?",
+			"ok": ["5x8"],
+			"wrong": ["8x8","5x5"]
+		},
+		{
+			"title": "¿Cuántas veces entra el 20 en 3080?",
+			"ok": ["Entre 100 y 1000"],
+			"wrong": ["Entre 10 y 100","Entre 1000 y 10"]
+		},
+		{
+			"title": "Lucio coloca empanadas en una bandeja en 6 filas de 8 empanadas cada una, para hornearlas. ¿Cuál de los siguientes cálculos sirve para calcular el total de empanadas que colocó?",
+			"ok": ["6x8"],
+			"wrong": ["6+8","6+6+6"]
+		},
+		{
+			"title": "Sol preparó ¼ litro de leche chocolatada para cada uno de sus 6 sobrinos. ¿Cuántos litros de leche chocolatada preparó en total?",
+			"ok": ["1 ½ l"],
+			"wrong": ["1 ¼ l","1 ¾ l"]
+		},
+		{
+			"title": "¿Cuál de estos números puede ser el resultado de una multiplicación por 5?",
+			"ok": ["1870"],
+			"wrong": ["1509","5006"]
+		},
+		{
+			"title": "En una papelera tienen una oferta de invitaciones para casamiento. Se puede elegir entre 3 colores de fondo, 4 colores para las letras, 3 tipos de papel y 2 tipos de sobres: ¿Cuántas invitaciones diferentes se pueden armar?",
+			"ok": ["72"],
+			"wrong": ["12","36"]
+		}
+	]
+}
