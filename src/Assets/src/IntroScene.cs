@@ -13,6 +13,6 @@ public class IntroScene : MonoBehaviour {
     }
     public void StartGame()
     {
-        Data.Instance.LoadLevel("MainMenu", false);
+        Data.Instance.LoadLevel("Map", false);
     }
 }

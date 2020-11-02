@@ -64,6 +64,8 @@ public class DolphinUI : MonoBehaviour
     void DelayedOnTutorialReady()
     {
         vuelta = Data.Instance.GetComponent<TextsDolphin>().texts.level_1;
+        Data.Instance.GetComponent<TextsDolphin>().ShuffleArr(vuelta);
+
         GetComponent<Animation>().Stop();
         GetComponent<Animation>().enabled = false;
         Events.OnTutorialReady();
