@@ -16,6 +16,7 @@ public class MapMainMenuButtons : MonoBehaviour
             MapMainButton b = Instantiate(button);
             b.transform.SetParent(container);
             b.Init(this, a);
+            b.transform.localScale = Vector3.one;
         }
     }
     public void OnClicked(int id)
