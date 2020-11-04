@@ -105,6 +105,9 @@ public class MoneysUI : MonoBehaviour {
             Events.OnSoundFX("mistakeWord");
             commitError = true;
             Events.OnAddWrongWord(title);
+            Invoke("DiceFrase", 1);// 2.2f);
+            Events.OnOkWord(GameData.types.MONKEY);
+            okWords++;
         }
         else
         {
@@ -113,9 +116,9 @@ public class MoneysUI : MonoBehaviour {
             ReplaceOkWordWith(text);
             ui.GetComponent<Animation>().Play("ok");
             Events.OnSoundFX("correctWord");
-            Events.OnOkWord(GameData.types.MONKEY);            
-            Events.OnVoiceSayFromList("felicitaciones", 0.8f);
-            Invoke("DiceFrase", 2.2f);
+            Events.OnOkWord(GameData.types.MONKEY);
+            //  Events.OnVoiceSayFromList("felicitaciones", 0.8f);
+            Invoke("DiceFrase", 1);// 2.2f);
         }
     }
     void OnSayCorrectWord_with_beep()

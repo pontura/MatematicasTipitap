@@ -142,11 +142,14 @@ public class LevelsManager : MonoBehaviour {
         //}
         Data.Instance.routes.SetPerfect(!commitError);
         vueltas = 0;
-        Data.Instance.routes.NextLevel();
-        if (Data.Instance.routes.gameID >= 7)
+
+        if (Data.Instance.routes.gameID+1 >= Data.Instance.routes.GetTotalGamesInActualRoute())
             EndSceneOn();
         else
+        {
+            Data.Instance.routes.NextLevel();
             LoadNextGame(true);
+        }
     }
     void DebugWinLevel()
     {

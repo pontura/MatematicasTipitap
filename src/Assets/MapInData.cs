@@ -22,7 +22,7 @@ public class MapInData : MonoBehaviour
     {
         Events.OnShowMap -= OnShowMap;
     }
-    public void OnShowMap(bool showIt)
+    void OnShowMap(bool showIt)
     {
         if (showIt)
         {

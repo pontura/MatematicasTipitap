@@ -36,6 +36,7 @@ public class DolphinUI : MonoBehaviour
 
     void Start()
     {
+        Data.Instance.GetComponent<PopupScreen>().Init("El arte no es el arte definitivo, es solo ilustrativo y permite explorar la dinamica del runner lateral.");
         wrongFeedback.text = "";
         okFeedback.text = "";
 

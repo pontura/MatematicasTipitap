@@ -38,8 +38,10 @@ public class Data : MonoBehaviour
     }
     void Update()
     {
+#if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.Space))
             Events.OnLevelComplete(GameData.types.BRIDGE, true);
+#endif
     }
     public void LoadLevel(string aLevelName, bool showMap)
     {

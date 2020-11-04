@@ -22,12 +22,12 @@ public class Transitions : MonoBehaviour {
 	}
     void OnSceneLoaded()
     {
-        Invoke("SetOff", 0.7f);
+        Invoke("SetOff", 0.1f);
     }
     public void SetOn(bool showMap)
     {
         wheel.SetActive(false);
-        this.showMap = showMap;
+       // this.showMap = showMap;
         isOn = true;
         image.fillOrigin = 0;
         panel.SetActive(true);

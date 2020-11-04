@@ -25,71 +25,71 @@ public class Routes : MonoBehaviour {
     {
         Events.UnlockNextRoute += UnlockNextRoute;
         unlockedRoute = PlayerPrefs.GetInt("unlockedRoute", 1);
-        int id = 0;
-        foreach (GameData gameData in route1)
-        {
-            if (PlayerPrefs.GetInt("level_1_" + id) == 1)
-                gameData.perfect = true;
-            id++;
-        }
-        id = 0;
-        foreach (GameData gameData in route2)
-        {
-            if (PlayerPrefs.GetInt("level_2_" + id) == 1)
-                gameData.perfect = true;
-            id++;
-        }
-        id = 0;
-        foreach (GameData gameData in route3)
-        {
-            if (PlayerPrefs.GetInt("level_3_" + id) == 1)
-                gameData.perfect = true;
-            id++;
-        }
+        //int id = 0;
+        //foreach (GameData gameData in route1)
+        //{
+        //    if (PlayerPrefs.GetInt("level_1_" + id) == 1)
+        //        gameData.perfect = true;
+        //    id++;
+        //}
+        //id = 0;
+        //foreach (GameData gameData in route2)
+        //{
+        //    if (PlayerPrefs.GetInt("level_2_" + id) == 1)
+        //        gameData.perfect = true;
+        //    id++;
+        //}
+        //id = 0;
+        //foreach (GameData gameData in route3)
+        //{
+        //    if (PlayerPrefs.GetInt("level_3_" + id) == 1)
+        //        gameData.perfect = true;
+        //    id++;
+        //}
 
-        id = 0;
-        foreach (GameData gameData in route4)
-        {
-            if (PlayerPrefs.GetInt("level_4_" + id) == 1)
-                gameData.perfect = true;
-            id++;
-        }
-        id = 0;
-        foreach (GameData gameData in route5)
-        {
-            if (PlayerPrefs.GetInt("level_5_" + id) == 1)
-                gameData.perfect = true;
-            id++;
-        }
-        id = 0;
-        foreach (GameData gameData in route6)
-        {
-            if (PlayerPrefs.GetInt("level_6_" + id) == 1)
-                gameData.perfect = true;
-            id++;
-        }
+        //id = 0;
+        //foreach (GameData gameData in route4)
+        //{
+        //    if (PlayerPrefs.GetInt("level_4_" + id) == 1)
+        //        gameData.perfect = true;
+        //    id++;
+        //}
+        //id = 0;
+        //foreach (GameData gameData in route5)
+        //{
+        //    if (PlayerPrefs.GetInt("level_5_" + id) == 1)
+        //        gameData.perfect = true;
+        //    id++;
+        //}
+        //id = 0;
+        //foreach (GameData gameData in route6)
+        //{
+        //    if (PlayerPrefs.GetInt("level_6_" + id) == 1)
+        //        gameData.perfect = true;
+        //    id++;
+        //}
 
-        id = 0;
-        foreach (GameData gameData in route7)
-        {
-            if (PlayerPrefs.GetInt("level_7_" + id) == 1)
-                gameData.perfect = true;
-            id++;
-        }
-        id = 0;
-        foreach (GameData gameData in route8)
-        {
-            if (PlayerPrefs.GetInt("level_8_" + id) == 1)
-                gameData.perfect = true;
-            id++;
-        }
-        id = 0;
-        foreach (GameData gameData in route9)
-        {
-            if (PlayerPrefs.GetInt("level_9_" + id) == 1)   
-                gameData.perfect = true;
-            id++;
-        }
+        //id = 0;
+        //foreach (GameData gameData in route7)
+        //{
+        //    if (PlayerPrefs.GetInt("level_7_" + id) == 1)
+        //        gameData.perfect = true;
+        //    id++;
+        //}
+        //id = 0;
+        //foreach (GameData gameData in route8)
+        //{
+        //    if (PlayerPrefs.GetInt("level_8_" + id) == 1)
+        //        gameData.perfect = true;
+        //    id++;
+        //}
+        //id = 0;
+        //foreach (GameData gameData in route9)
+        //{
+        //    if (PlayerPrefs.GetInt("level_9_" + id) == 1)   
+        //        gameData.perfect = true;
+        //    id++;
+        //}
         Events.ResetApp += ResetApp;
     }
     void OnDestroy()
@@ -137,6 +137,25 @@ public class Routes : MonoBehaviour {
           //  print("New Perfect:   " + "level_" + routeID + "_" + gameID);
             PlayerPrefs.SetInt("level_" + routeID + "_" + gameID, 1);
             GetActualGame().perfect = isPerfect;
+        }
+    }
+    public int GetTotalGamesInActualRoute()
+    {
+        return GetActualGamesInRoute().Count;
+    }
+    public List<GameData> GetActualGamesInRoute()
+    {
+        switch (routeID)
+        {
+            case 1: return route1;
+            case 2: return route2;
+            case 3: return route3;
+            case 4: return route4;
+            case 5: return route5;
+            case 6: return route6;
+            case 7: return route7;
+            case 8: return route8;
+            default: return route9;
         }
     }
     public void RouteSelected(int routeID)
