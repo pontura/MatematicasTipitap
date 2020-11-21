@@ -178,7 +178,13 @@ public class LevelsManager : MonoBehaviour {
            case GameData.types.FROGGER:
                    Data.Instance.LoadLevel("Game_Frogger", showMap); 
                break;
-       }
+            case GameData.types.MATEMATICAS:
+                Data.Instance.LoadLevel("DemoScreen", showMap);
+                break;
+            case GameData.types.SELVA:
+                Data.Instance.LoadLevel("DemoScreen", showMap);
+                break;
+        }
     }
     void EndSceneOn()
     {

@@ -8,6 +8,8 @@ public class MainMenu : MainClass {
 
     void Start()
     {
+        Map();
+        return;
         if (!Data.Instance.levelsManager.introPlayed)
         {
             Data.Instance.levelsManager.introPlayed = true;            

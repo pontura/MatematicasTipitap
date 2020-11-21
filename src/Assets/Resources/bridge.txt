@@ -7,15 +7,26 @@
 		},
 		{
 			"title": "Ordenar de menor a mayor",
-			"ok": ["6x2", "4x8", "7x10", "9x9"]
-		},
-		{
-			"title": "Ordenar de menor a mayor",
 			"ok": ["2x3", "5x3", "6x6", "6x8", "8x10" ]
 		},
 		{
 			"title": "Ordenar de menor a mayor",
 			"ok": ["3x3",  "9x3", "5x7", "7x8", "8x11", "9x10"]
+		},
+		{
+			"title": "Ordenar de menor a mayor",
+			"ok": [  "9x1", "7x2", "5x5", "8x4", "10x5", "8x8", "9x9", "20x5"]
+		}
+	],
+	"level_2":
+	[
+		{
+			"title": "Ordenar de menor a mayor",
+			"ok": ["6x2", "4x8", "7x10", "9x9"]
+		},
+		{
+			"title": "Ordenar de menor a mayor",
+			"ok": ["2x3", "5x3", "6x6", "6x8", "8x10" ]
 		},
 		{
 			"title": "Ordenar de menor a mayor",

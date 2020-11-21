@@ -24,6 +24,7 @@ public class PopupScreen : MonoBehaviour
     }
     public void Close()
     {
+        CancelInvoke();
         panel.SetActive(false);
         Time.timeScale = 1;
     }

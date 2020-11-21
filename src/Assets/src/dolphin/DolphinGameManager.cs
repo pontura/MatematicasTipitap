@@ -70,8 +70,8 @@ public class DolphinGameManager : MonoBehaviour {
         camera.UpdatePosition(distance);
         dolphinManager.UpdatePosition(distance);
 
-        if (PlayerPrefs.GetString("tutorialReady") != "true")
-            DEFAULT_SPEED = 0.055f;
+      //  if (PlayerPrefs.GetString("tutorialReady") != "true")
+            DEFAULT_SPEED = 0.075f;
 
     }
     void OnDestroy()
@@ -130,9 +130,21 @@ public class DolphinGameManager : MonoBehaviour {
 
         DEFAULT_SPEED += (distance/1000)*SPEED_ACCELERATION;
     }
+    bool skipGame;
+    void SkipGame()
+    {
+        if (skipGame)
+            return;
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Events.OnLevelComplete(GameData.types.DOLPHIN, true);
+            skipGame = true;
+        }
+    }
     void Update()
     {
-       
+        SkipGame();
+
         if (DolphinGame.Instance ==null ) return;
 
         if (DolphinGame.Instance.state == DolphinGame.states.ENDED)

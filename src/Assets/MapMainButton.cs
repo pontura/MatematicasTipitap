@@ -8,6 +8,7 @@ public class MapMainButton : MonoBehaviour
     public Text field;
     public int id;
     MapMainMenuButtons mapMainMenuButtons;
+    public GameObject locked;
 
     public void Init(MapMainMenuButtons mapMainMenuButtons, int id)
     {
@@ -19,5 +20,9 @@ public class MapMainButton : MonoBehaviour
     public void OnClicked()
     {
         mapMainMenuButtons.OnClicked(id);
+    }
+    public void SetLocked(bool isLocked)
+    {
+        locked.SetActive(isLocked);
     }
 }

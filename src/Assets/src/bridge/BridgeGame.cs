@@ -64,7 +64,10 @@ public class BridgeGame : MainClass
     }
     void DelayedOnTutorialReady()
     {
-        vuelta = Data.Instance.GetComponent<TextsBridge>().texts.level_1;
+        if(Data.Instance.routes.routeID == 1)
+            vuelta = Data.Instance.GetComponent<TextsBridge>().texts.level_1;
+        else
+            vuelta = Data.Instance.GetComponent<TextsBridge>().texts.level_2;
         GetComponent<Animation>().Stop();
         GetComponent<Animation>().enabled = false;
        // Events.OnTutorialReady();
@@ -291,8 +294,20 @@ public class BridgeGame : MainClass
             Events.OnGood();
         Events.OnLevelComplete(GameData.types.BRIDGE, commitError);
     }
+    bool skipGame;
+    void SkipGame()
+    {
+        if (skipGame)
+            return;
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Events.OnLevelComplete(GameData.types.BRIDGE, true);
+            skipGame = true;
+        }
+    }
     void Update()
     {
+        SkipGame();
         if (state == states.INTRO)
         {
             Vector2 pos = avatarsManager.nene.transform.position;

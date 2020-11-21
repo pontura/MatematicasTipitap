@@ -7,7 +7,7 @@ public class MainClass : MonoBehaviour {
 	void OnEnable () {
         Invoke("Done", 0.5f);
     }
-    public void Done()
+    public virtual void Done()
     {
         string sceneName = SceneManager.GetActiveScene().name;
         Metrics.OnView(sceneName);

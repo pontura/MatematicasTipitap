@@ -13,7 +13,9 @@ public class GameData {
         MONKEY,
         BRIDGE,
         FROGGER,
-        DOLPHIN
+        DOLPHIN,
+        MATEMATICAS,
+        SELVA
     }
     public int wordsQty;
 

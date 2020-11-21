@@ -13,6 +13,7 @@ public class TextsBridge : Texts
     public class TextsData
     {
         public List<Vuelta> level_1;
+        public List<Vuelta> level_2;
     }
 
     [Serializable]

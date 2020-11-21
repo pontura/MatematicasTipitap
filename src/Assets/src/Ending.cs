@@ -13,7 +13,11 @@ public class Ending : MainClass {
     public AvatarsManager avatarsManager;
     bool winPremio;
 
+    public override void Done() { }
     void Start() {
+
+        Data.Instance.LoadLevel("Map", false);
+        return;
         Data.Instance.stats.TrackEvent("fin_recorrido", Data.Instance.routes.routeID);
 
         Data.Instance.GetComponent<SettingsScreen>().settingsButton.SetActive(false);

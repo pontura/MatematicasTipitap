@@ -5,8 +5,8 @@ using System.Collections.Generic;
 
 public class DolphinUI : MonoBehaviour
 {
-
-    List<TextsDolphin.Vuelta> vuelta;
+    public int totalWords;
+    public List<TextsDolphin.Vuelta> vuelta;
 
     public DolphinGameManager dolphinGameManager;
     public Image filledImage;
@@ -64,7 +64,12 @@ public class DolphinUI : MonoBehaviour
     }
     void DelayedOnTutorialReady()
     {
-        vuelta = Data.Instance.GetComponent<TextsDolphin>().texts.level_1;
+        if (Data.Instance.routes.routeID == 1)
+            vuelta = Data.Instance.GetComponent<TextsDolphin>().texts.level_1;
+        else
+            vuelta = Data.Instance.GetComponent<TextsDolphin>().texts.level_2;
+
+        totalWords = vuelta.Count;
         Data.Instance.GetComponent<TextsDolphin>().ShuffleArr(vuelta);
 
         GetComponent<Animation>().Stop();
@@ -155,13 +160,10 @@ public class DolphinUI : MonoBehaviour
 
         Events.OnOkWord(GameData.types.DOLPHIN);
 
-
-        float totalWordsUsed = (float)Data.Instance.wordsUsed.words.Count;
-
-        float progress = okWords / totalWordsUsed;
+        float progress = okWords / (float)totalWords;
         filledImage.fillAmount = progress;
 
-        print("________________totalWordsUsed: " + totalWordsUsed + " okWords: " + okWords + " progress: " + progress);
+        print("________________totalWordsUsed: " + (float)totalWords + " okWords: " + okWords + " progress: " + progress);
     }
     void SetFields()
     {
@@ -189,7 +191,7 @@ public class DolphinUI : MonoBehaviour
         state = states.WAITING;
         yield return new WaitForSeconds(2.1f);
 
-        if (okWords >= Data.Instance.wordsUsed.words.Count)
+        if (okWords >= totalWords)
         {
             yield return new WaitForSeconds(2f);    
             LevelComplete();

@@ -8,7 +8,8 @@ public class AvatarsManager : MonoBehaviour {
     public Avatar nena;
     public string initState;
 
-	void Start () {        
+	void Start () {
+        return;
         if (initState == "Idle") Idle();
 
         Events.OnAvatarChangeCloth += OnAvatarChangeCloth;

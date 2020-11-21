@@ -55,9 +55,20 @@ public class GameManager : MainClass
         GetComponent<Animator>().enabled = false;
         Events.AvatarsIdle();
     }
-    // Update is called once per frame
+    bool skipGame;
+    void SkipGame()
+    {
+        if (skipGame)
+            return;
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Events.OnLevelComplete(GameData.types.MONKEY, true);
+            skipGame = true;
+        }
+    }
     void Update()
     {
+        SkipGame();
         if (!started) return;
         switch (CurrentGameState)
         {
